@@ -6,10 +6,8 @@ This repository provides a practical guide on using transfer learning for binary
 
 - [Introduction](#introduction)
 - [Getting Started](#getting-started)
-- [Data Preparation](#data-preparation)
 - [Transfer Learning](#transfer-learning)
 - [Fine-tuning](#fine-tuning)
-- [Evaluation and Inference](#evaluation-and-inference)
 - [Conclusion](#conclusion)
 - [Contributing](#contributing)
 - [License](#license)
@@ -24,34 +22,9 @@ In this repository, we demonstrate how to perform transfer learning for binary c
 
 To get started, follow the steps below:
 
-1. Clone this repository:
+1. Click this link to open the notebook in Colab: https://colab.research.google.com/github/barzansaeedpour/transfer-learning-for-binary-classification-tensorflow/blob/main/01_transfer_learning_cats_dogs.ipynb 
 
-   ```
-   git clone https://github.com/your-username/transfer-learning-for-binary-classification-tensorflow.git
-   cd transfer-learning-for-binary-classification-tensorflow
-   ```
-
-2. Install the necessary dependencies. Assuming you have Python and pip installed, run:
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Download or prepare your dataset for binary classification. Make sure you have separate folders for each class containing the respective images.
-
-## Data Preparation
-
-Before starting the transfer learning process, it is crucial to properly prepare the dataset. Ensure that you have labeled examples for each class and split your data into training and validation sets.
-
-Follow these steps to prepare your data:
-
-1. Organize your data into separate folders for each class. For example, if you have a binary classification task for cats and dogs, create two folders: `cats` and `dogs`.
-
-2. Split your data into training and validation sets. Aim for a reasonable ratio, such as 90% for training and 10% for validation.
-
-3. Resize your images to a consistent size. Most pre-trained models have specific input size requirements, so it's essential to resize your images accordingly.
-
-4. Preprocess your images. Depending on the model's input requirements, you may need to perform additional preprocessing steps like normalizing pixel values or applying data augmentation techniques.
+2. The instruction and explaination of the code is mentioned in the notebook
 
 ## Transfer Learning
 
@@ -73,8 +46,6 @@ The steps for transfer learning are as follows:
 
 ## Fine-tuning
 
-
-
 After the transfer learning phase, we can further improve the model's performance through fine-tuning. Fine-tuning involves unfreezing some of the pre-trained layers and training them along with the newly added layers.
 
 Here are the steps for fine-tuning:
@@ -86,16 +57,6 @@ Here are the steps for fine-tuning:
 3. Continue training the model using the labeled training data, allowing the unfrozen layers to update their weights based on the specific task.
 
 4. Monitor the validation accuracy during training and stop when the performance no longer improves or starts to overfit.
-
-## Evaluation and Inference
-
-Once the model is trained, it's time to evaluate its performance and make predictions on unseen data.
-
-1. Evaluate the model on the labeled validation set to assess its accuracy, precision, recall, and other relevant metrics.
-
-2. Use the model to make predictions on new, unseen data. Preprocess the input data in the same way as during training, and pass it through the trained model to obtain predictions.
-
-3. Adjust the decision threshold if necessary. Depending on the specific requirements of your binary classification task, you may need to tune the threshold for classifying positive and negative examples.
 
 ## Conclusion
 
